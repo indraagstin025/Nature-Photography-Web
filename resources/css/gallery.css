@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+    .grid-areas-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "g1 g2 g3"
+            "g1 g4 g3";
+        align-items: stretch; /* Memastikan semua gambar mengisi area grid */
+        gap: 16px; /* Tambahkan space antar gambar */
+    }
+
+    .area-g1 {
+        grid-area: g1;
+    }
+    .area-g2 {
+        grid-area: g2;
+        align-self: center;
+        margin-top: -15px; /* Turunkan sedikit tapi tidak terlalu rapat */
+    }
+    .area-g3 {
+        grid-area: g3;
+    }
+    .area-g4 {
+        grid-area: g4;
+    }
+}
+
+/* Untuk semua browser */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+
+
+
+
